@@ -2,34 +2,17 @@
 import MenuLinks from "@components/MenuLinks.astro";
 ---
 
-<nav
-  aria-labelledby="hamburger"
-  id="navMenu"
-  class="z-20 transition-[width] duration-200 border-r border-primary/90 fixed text-white bg-primary w-0 h-full overflow-hidden lg:hidden"
->
-  <ul class="mt-20 space-y-6 px-4"><MenuLinks /></ul>
-</nav>
-<header class="z-20 bg-primary text-white h-header fixed top-0 left-0 w-full flex items-center px-2 justify-between">
-  <button
-    class="lg:hidden cursor-pointer"
-    id="hamburger"
-    aria-label="Show Navigation Menu"
-    aria-expanded="false"
-    tabindex="0">&#9776;</button
-  >
-  <div class="text-center">Logo</div>
-</header>
-<main
-  id="mainContent"
-  class="transition-[margin-left] duration-300 h-screen flex flex-col px-4 pt-[calc(theme('height.header')+1rem)]"
->
-  <div
-    id="overlay"
-    class="z-10 fixed inset-0 w-full h-full bg-black opacity-0 invisible transition-opacity overflow-auto"
-  >
-  </div>
-  <section class="grow"><slot /></section>
-  <footer>Footer</footer>
-</main>
+import BaseLayoutComponent from "@components/BaseLayoutComponent.astro";
+import Maintenance from "@components/Maintenance.astro";
+const showMaintenance = import.meta.env.ENABLE_MAINTENANCE === "true";
 
-<script src="@scripts/menu"></script>
+interface Props {
+  title?: string;
+}
+
+const { title = "Daniele Cencig" } = Astro.props;
+---
+
+{showMaintenance && <Maintenance />}
+
+{!showMaintenance && <BaseLayoutComponent title={title} />}

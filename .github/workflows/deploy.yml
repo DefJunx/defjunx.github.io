@@ -10,6 +10,9 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  ENABLE_MAINTENANCE: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
