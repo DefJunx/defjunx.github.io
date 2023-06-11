@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 env:
-  ENABLE_MAINTENANCE: ${{ github.env.ENABLE_MAINTENANCE }}
+  ENABLE_MAINTENANCE: ${{ vars.ENABLE_MAINTENANCE }}
 
 jobs:
   build:
