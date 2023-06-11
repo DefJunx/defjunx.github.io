@@ -23,6 +23,8 @@ jobs:
         uses: withastro/action@v0.2.0
         with:
           node-version: 19
+        env:
+          ENABLE_MAINTENANCE: ${{ env.ENABLE_MAINTENANCE }}
   deploy:
     needs: build
     runs-on: ubuntu-latest
