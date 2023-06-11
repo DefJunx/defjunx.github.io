@@ -11,12 +11,15 @@ permissions:
   id-token: write
 
 env:
-  ENABLE_MAINTENANCE: true
+  ENABLE_MAINTENANCE: ${{ github.env.ENABLE_MAINTENANCE }}
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Check variables value
+        run: |
+          env
       - name: Checkout your repository using git
         uses: actions/checkout@v3
       - name: Install, build, and upload your site
