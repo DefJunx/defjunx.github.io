@@ -1,7 +1,7 @@
 ---
 import BaseLayoutComponent from "@components/BaseLayoutComponent.astro";
 import Maintenance from "@components/Maintenance.astro";
-const showMaintenance = import.meta.env.ENABLE_MAINTENANCE === "true";
+const showMaintenance = import.meta.env.PUBLIC_ENABLE_MAINTENANCE === "true";
 
 interface Props {
   title?: string;

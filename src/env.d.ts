@@ -1,6 +1,6 @@
 /// <reference types="astro/client" />
 interface ImportMetaEnv {
-  ENABLE_MAINTENANCE: string;
+  PUBLIC_ENABLE_MAINTENANCE: string;
 }
 
 interface ImportMeta {
