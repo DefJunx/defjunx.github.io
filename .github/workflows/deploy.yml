@@ -14,11 +14,13 @@ env:
   PUBLIC_ENABLE_MAINTENANCE: ${{ github.vars.PUBLIC_ENABLE_MAINTENANCE }}
 
 jobs:
-  build:
+  debug-variables:
     runs-on: ubuntu-latest
     steps:
       - uses: hmarr/debug-action@v2
-
+  build:
+    runs-on: ubuntu-latest
+    steps:
       - name: Check variables value
         run: |
           env
