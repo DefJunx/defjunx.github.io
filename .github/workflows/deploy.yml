@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 env:
-  ENABLE_MAINTENANCE: true
+  PUBLIC_ENABLE_MAINTENANCE: true
 
 jobs:
   build:
@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: 19
         env:
-          ENABLE_MAINTENANCE: ${{ env.ENABLE_MAINTENANCE }}
+          PUBLIC_ENABLE_MAINTENANCE: ${{ env.PUBLIC_ENABLE_MAINTENANCE }}
   deploy:
     needs: build
     runs-on: ubuntu-latest
