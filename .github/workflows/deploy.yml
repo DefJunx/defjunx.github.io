@@ -11,17 +11,21 @@ permissions:
   id-token: write
 
 env:
-  PUBLIC_ENABLE_MAINTENANCE: ${{ vars.PUBLIC_ENABLE_MAINTENANCE }}
+  PUBLIC_ENABLE_MAINTENANCE: ${{ github.env.PUBLIC_ENABLE_MAINTENANCE }}
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: hmarr/debug-action@v2
+
       - name: Check variables value
         run: |
           env
+
       - name: Checkout your repository using git
         uses: actions/checkout@v3
+
       - name: Install, build, and upload your site
         uses: withastro/action@v0.2.0
         with:
