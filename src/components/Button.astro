@@ -19,10 +19,6 @@ const button = cva("button", {
 
 export interface Props extends HTMLAttributes<"button">, VariantProps<typeof button> {}
 
-/**
- * For Astro components, we recommend setting your defaultVariants within
- * Astro.props (which are `undefined` by default)
- */
 const { intent = "primary", size = "medium", class: className } = Astro.props;
 ---
 
