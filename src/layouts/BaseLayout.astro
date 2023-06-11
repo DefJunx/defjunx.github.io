@@ -2,8 +2,14 @@
 import BaseLayoutComponent from "@components/BaseLayoutComponent.astro";
 import Maintenance from "@components/Maintenance.astro";
 const showMaintenance = import.meta.env.ENABLE_MAINTENANCE === "true";
+
+interface Props {
+  title?: string;
+}
+
+const { title = "Daniele Cencig" } = Astro.props;
 ---
 
 {showMaintenance && <Maintenance />}
 
-{!showMaintenance && <BaseLayoutComponent />}
+{!showMaintenance && <BaseLayoutComponent title={title} />}

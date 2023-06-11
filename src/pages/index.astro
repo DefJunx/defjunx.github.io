@@ -3,32 +3,21 @@ import Button from "@components/Button.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Daniele Cencig</title>
-  </head>
-  <body class="bg-zinc-100 text-text">
-    <BaseLayout>
-      <h1>Daniele Cencig</h1>
+<BaseLayout>
+  <h1>Daniele Cencig</h1>
 
-      <div class="m-4">
-        <Button intent="primary">Primary</Button>
-        <Button intent="secondary">Secondary</Button>
-      </div>
-      <div class="m-4">
-        <Button size="large" intent="primary">Primary large</Button>
-        <Button size="large" intent="secondary">Secondary large</Button>
-      </div>
-      <div class="m-4">
-        <Button size="small" intent="primary">Primary large</Button>
-        <Button size="small" intent="secondary">Secondary large</Button>
-      </div>
+  <div class="m-4">
+    <Button intent="primary">Primary</Button>
+    <Button intent="secondary">Secondary</Button>
+  </div>
+  <div class="m-4">
+    <Button size="large" intent="primary">Primary large</Button>
+    <Button size="large" intent="secondary">Secondary large</Button>
+  </div>
+  <div class="m-4">
+    <Button size="small" intent="primary">Primary large</Button>
+    <Button size="small" intent="secondary">Secondary large</Button>
+  </div>
 
-      <p>Testo</p>
-    </BaseLayout>
-  </body>
-</html>
+  <p>Testo</p>
+</BaseLayout>
