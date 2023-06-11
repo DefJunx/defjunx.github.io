@@ -1,3 +1,7 @@
+---
+import Button from "@components/Button.astro";
+---
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -9,5 +13,16 @@
   <body>
     <h1>Daniele Cencig</h1>
     <a href="/about">About</a>
+
+    <div class="m-2">
+      <Button intent="primary">Primary</Button>
+      <Button intent="secondary">Secondary</Button>
+
+      <Button size="large" intent="primary">Primary large</Button>
+      <Button size="large" intent="secondary">Secondary large</Button>
+
+      <Button size="small" intent="primary">Primary large</Button>
+      <Button size="small" intent="secondary">Secondary large</Button>
+    </div>
   </body>
 </html>
