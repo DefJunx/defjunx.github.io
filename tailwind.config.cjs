@@ -9,6 +9,12 @@ module.exports = {
         background: "rgb(245, 245, 245)",
         accent: "rgb(0, 188, 212)",
         text: "rgb(51, 51, 51)"
+      },
+      height: {
+        header: "60px"
+      },
+      width: {
+        sidebar: "250px"
       }
     }
   },
